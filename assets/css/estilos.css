@@ -1,0 +1,840 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+:root {
+    --theme-color: white;
+    --primary-color:#4386AC;
+    --text-color-inverse:#4CB3B6;
+    --text-color: black;
+    --footer: #333;
+  }
+  
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Tahoma, sans-serif;
+} 
+body{
+   
+    background-image: url(../img/img-inicio.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+
+}
+
+/*INICIO ENCABEZADO*/
+.header{
+    background-color: rgba(158,154,154,0.5);
+    box-shadow: 0 4px 5px var(--text-color);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+}
+/*MENU*/
+.nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin:0 auto;
+}
+.nav-menu-link{
+    text-decoration: none;
+    color:var(--text-color-inverse);
+}
+/*LOGO*/
+.logo img{
+    width:200px;  
+}
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+    
+}
+.nav-menu-item{
+    text-decoration: none;
+    font-size: 18px;
+    margin:0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+    font-weight: bold;
+    
+}
+.nav-menu-link{
+    padding: 8px 12px;
+}
+
+.nav-menu-link:hover{
+    color:var(--footer);
+    border-bottom:2px solid var(--primary-color); 
+    transition: 0.5s;
+}
+
+.barra{
+    text-decoration: none;
+    font-size: 18px;
+    margin:0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+    color:var(--text-color-inverse); 
+    font-weight: bold;
+}
+/*MENU HAMBURGUESA*/
+.nav-toggle{
+    color:var(--text-color);
+    background: none;
+    border:none;
+    font-size: 30px;
+    padding:0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+}
+/*ICONOS DE REDES SOCIALES*/
+.social-menu{
+    display: flex;
+    font-size: 26px;
+    padding-top:1em;
+    
+}
+.social-menu i{
+    color:#333;
+    box-shadow: 0 0 15px 0 #333;
+}
+.social-menu i:hover{
+    color:#4386AC; 
+}
+
+
+/*mediaquerys*/
+@media (max-width: 768px){
+    .profesionales h2{
+        padding-left:120px;
+    }
+    #odontologos{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        padding-top: 70px;
+    }
+    .header{
+        height: 60px;
+    }
+    .nav-menu{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: var(--theme-color);
+        position: fixed;
+        left:0;
+        top:60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100%-60px);
+        overflow-y: auto;
+        left:100%;
+        transition: left 0.3s;
+    }
+    .barra{
+        display: none;
+    }
+    .nav-menu-item{
+        line-height: 70px;
+    }
+    .nav-menu-link:hover,
+    .nav-menu-link_active{
+        background: none;
+        color:var(--footer);
+    }
+    .nav-toggle{
+        display: block;
+    }
+    .nav-menu_visible{
+        left: 0;
+    }
+    .nav-toggle:focus:not(:focus-visible) {
+        outline: none;
+    }
+    /*iconos de redes sociales*/
+    .social-menu{
+        display: none;
+    }
+    /*SECCIÓN CONTENIDO PRINCIPAL*/
+    #inicio{
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+    }
+    .contenido-inicio h2{
+        font-size:15px;
+        line-height: 1.5;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        text-transform: capitalize;
+    }
+    .main-head-partition{
+        border-bottom: 2px solid #adadad;
+        position: absolute;
+        left:80px;
+        right:100px;
+    }
+    .parrafo p{
+        font-size: 16px;
+        line-height: 1.3;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        font-weight:500;
+        margin: 20 auto;
+    }
+    /*INICIO TRATAMIENTOS DENTALES*/
+    .tratamientos{
+        text-align: center;
+        padding-top:5px;
+    }
+    .sub_tratamientos h2{
+        padding-bottom: 25px;
+        color:var(--primary-color);
+        font-size: 15px;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        text-transform: capitalize;
+    }
+    .tooth_1{
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        padding-top: 10px;
+    }
+    .tooth_1:hover{
+        transform: scale(1.2); 
+    }
+    .tooth_2{
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        padding-top: 10px;
+    }
+    .tooth_2:hover{
+        transform: scale(1.2); 
+    }
+    .tooth_3{
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .tooth_3:hover{
+        transform: scale(1.2); 
+    }
+    /*COMIENZO PIE DE PÁGINA*/
+    footer{
+        background-color:#4CB3B6;
+        text-shadow: 1px 5px 2px rgb(0 0 0 / 50%); 
+    }
+    .horarios a{
+        background-color: #333;
+        color:#fff;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding-top:45px;
+        padding-bottom: 15px;      
+    }
+    .horarios a:hover{
+        color: #4386AC  
+    }
+    .copyright{
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    }
+@media only screen and (min-width: 580px) and (max-width:768px){
+     /*INICIO TRATAMIENTOS DENTALES*/
+    .tratamientos{
+        text-align: center;
+        padding-top:5px;
+    }
+    .sub_tratamientos h2{
+        padding-bottom: 25px;
+        color:var(--primary-color);
+        font-size: 15px;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        text-transform: capitalize;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width:949px){
+    body{
+        padding-top: 70px;
+    }
+    .header{
+        height: 60px;
+    }
+ 
+    /*SECCIÓN CONTENIDO PRINCIPAL*/
+    #inicio{
+        text-align: center;
+    }
+    .contenido-inicio h2{
+        font-size:28px;
+        line-height: 1.5;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        text-transform: capitalize;
+        margin: 0;
+        padding-top:5px;
+    
+    }
+    .main-head-partition{
+        border-bottom: 2px solid #adadad;
+        position: absolute;
+        left:80px;
+        right:100px;
+    }
+    .parrafo p{
+        font-size: 25px;
+        line-height: 1.3;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        font-weight:500;
+        margin:20px;
+        padding-left: 80px;
+        padding-right:80px;
+    }
+    /*INICIO TRATAMIENTOS DENTALES*/
+    .tratamientos{
+        text-align: center;
+        padding-top:40px;
+        background-color:var(--theme-color);
+        display: flex;
+        justify-content: center;
+        padding-bottom: 150px;
+    
+    }
+    .sub_tratamientos h2{
+        padding-bottom: 25px;
+        color:var(--primary-color);
+        font-size: 25px;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        text-transform: capitalize;  
+        margin-left:350px;
+    }
+    .tooth_1{
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        margin-top: 140px;
+        position: relative;
+        right: 450px;
+        transform: scale(1.5);
+    }
+    .tooth_1:hover{
+        transform: scale(1.2); 
+    }
+    .tooth_2{
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        margin-top: 140px;
+        position: relative;
+        right: 280px;
+        transform: scale(1.5);
+    }
+    .tooth_2:hover{
+        transform: scale(1.2); 
+    }
+    .tooth_3{
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        margin-top: 140px;
+        position: relative;
+        right:60px;
+        transform: scale(1.5);
+    }
+    .tooth_3:hover{
+        transform: scale(1.2); 
+    }
+    /*COMIENZO PIE DE PÁGINA*/
+    footer{
+        background-color:#4CB3B6;
+        text-shadow: 1px 5px 2px rgb(0 0 0 / 50%);   
+    }
+    .horarios a{
+        background-color: #333;
+        color:#fff;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding-top:45px;
+        padding-bottom: 15px;  
+        
+    }
+    .horarios a:hover{
+        color: #4386AC  
+    }
+    .copyright{
+        font-size:18px;
+        text-align: center;
+  
+    }
+}
+
+
+@media (min-width:920px){
+    body{
+        padding-top: 70px;
+    }
+    .header{
+        height: 60px;
+    }
+ 
+    /*SECCIÓN CONTENIDO PRINCIPAL*/
+    #inicio{
+        text-align: center;
+    }
+    .contenido-inicio h2{
+        font-size:28px;
+        line-height: 1.5;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        text-transform: capitalize;
+        margin: 0;
+        padding-top: 20px;
+    
+    }
+    .main-head-partition{
+        border-bottom: 2px solid #adadad;
+        position: absolute;
+        left:80px;
+        right:100px;
+    }
+    .parrafo p{
+        font-size: 25px;
+        line-height: 1.3;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        font-weight:500;
+        margin:20px;
+        padding-left: 200px;
+        padding-right: 200px;
+        
+    }
+    /*INICIO TRATAMIENTOS DENTALES*/
+    .tratamientos{
+        text-align: center;
+        padding-top:40px;
+        background-color: var(--theme-color);
+        display: flex;
+        justify-content: center;
+        padding-bottom: 150px;
+    
+    }
+    .sub_tratamientos h2{
+        padding-bottom: 25px;
+        color:var(--primary-color);
+        font-size: 25px;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        text-transform: capitalize;  
+        margin-left:350px;
+    }
+    .tooth_1{
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        margin-top: 140px;
+        position: relative;
+        right: 450px;
+        transform: scale(1.5);
+    }
+    .tooth_1:hover{
+        transform: scale(1.2); 
+    }
+    .tooth_2{
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        margin-top: 140px;
+        position: relative;
+        right: 280px;
+        transform: scale(1.5);
+    }
+    .tooth_2:hover{
+        transform: scale(1.2); 
+    }
+    .tooth_3{
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        margin-top: 140px;
+        position: relative;
+        right:60px;
+        transform: scale(1.5);
+    }
+    .tooth_3:hover{
+        transform: scale(1.2); 
+    }
+    /*COMIENZO PIE DE PÁGINA*/
+    footer{
+        background-color:#4CB3B6;
+        text-shadow: 1px 5px 2px rgb(0 0 0 / 50%); 
+    }
+    .horarios a{
+        background-color: #333;
+        color:#fff;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding-top:45px;
+        padding-bottom: 15px;  
+        
+    }
+    .horarios a:hover{
+        color: #4386AC  
+    }
+    .copyright{
+        font-size:18px;
+        text-align: center;
+    }
+    
+    }
+
+@media (min-width:1024px){
+    .header{
+        height: 60px;
+    }
+ 
+    /*SECCIÓN CONTENIDO PRINCIPAL*/
+    #inicio{
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .contenido-inicio h2{
+        font-size:28px;
+        margin: 0;
+        padding-top: 120px;
+    }
+    /*LINEA DIVISORIA ENTRE H2 Y PARRAFO-HOME*/
+    .main-head-partition{
+        border-bottom: 2px solid #adadad;
+        position: absolute;
+        left:80px;
+        right:100px;
+    }
+    .parrafo p{
+        font-size: 25px;
+        margin:20px;
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: 200px;
+        
+    }
+    /*INICIO TRATAMIENTOS DENTALES*/
+    .tratamientos{
+        text-align: center;
+        margin-top:20px;
+        background-color:var(--theme-color);
+        display: flex;
+        justify-content: center;
+        padding-bottom: 150px;
+    
+    }
+    .sub_tratamientos h2{
+        padding-bottom: 25px;
+        color:var(--primary-color);
+        font-size: 25px;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        text-transform: capitalize;  
+        margin-left:350px;
+    }
+    .tooth_1{
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        margin-top: 140px;
+        position: relative;
+        right: 550px;
+        transform: scale(1.5);
+    }
+    .tooth_1:hover{
+        transform: scale(1.2); 
+    }
+    .tooth_2{
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        margin-top: 140px;
+        position: relative;
+        right: 280px;
+        transform: scale(1.5);
+    }
+    .tooth_2:hover{
+        transform: scale(1.2); 
+    }
+    .tooth_3{
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        margin-top: 140px;
+        position: relative;
+        right:20px;
+        transform: scale(1.5);
+    }
+    .tooth_3:hover{
+        transform: scale(1.2); 
+    }
+    /*COMIENZO PIE DE PÁGINA*/
+    footer{
+        background-color:#4CB3B6;
+        text-shadow: 1px 5px 2px rgb(0 0 0 / 50%);
+       
+        
+    }
+    .horarios a{
+        background-color: #333;
+        color:#fff;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding-top:45px;
+        padding-bottom: 15px;  
+        
+    }
+    .horarios a:hover{
+        color: #4386AC  
+    }
+    .copyright{
+        font-size:18px;
+        text-align: center;
+  
+    }
+
+} 
+/*media querys-html nosotros*/
+/*telefono*/
+@media (max-width: 768px){
+    body{
+   
+        background-image: url(../img/img-inicio.png);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+    
+    }
+    .profesionales h2{
+        padding-bottom: 25px;
+        padding-top: 25px;
+        color:var(--primary-color);
+        font-size: 18px;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        text-transform: capitalize;  
+        margin-left:20px;
+    }
+     
+    #odontologos{
+        display: flex;
+        width: 20%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+      
+        
+    }
+    .dentista_1{
+        position: relative;
+        right: 55px;
+        left:200px;
+        top:35px;
+     }
+     .dentista_2{
+         position: relative;
+         top: 45px;
+         left:200px;
+         right: 55px;
+     }
+     .dentista_3{
+        position: relative;
+         top: 55px;
+         left:200px;
+         right: 55px;
+     } 
+     .dentista_4{
+        position: relative;
+        top: 65px;
+        left:200px;
+        right: 55px;
+        padding-bottom: 150px;
+     }
+    .flotante {
+        position: relative;
+        animation: floating 2s -2s infinite;/*animación llamada "floating" que dura 2 segundos, comienza 2 segundos antes de que la animación comience y se repite de manera infinita*/
+        box-shadow: 5px 2px 10px black;/*5 pixeles a la derecha y arriba, 10 pixels de desenfoque y un color negro*/
+        width: 86%;
+    }
+    @keyframes floating {
+        0% {
+          transform: translatex(0);/* el elemento no se desplaza horizontalmente*/
+        }
+        50% {
+          transform: translatex(-10px);/* el elemento se desplaza 10 pixels hacia la izquierda*/
+        }
+        100% {
+          transform: translatex(0); /* elemento vuelve a su posición original*/
+        }
+    }
+
+}
+
+/*RESPONSIVE TELEFONO*/
+@media only screen and (min-width: 538px) and (max-width:750px){
+    .profesionales h2{
+        padding-left: 120px;
+
+    }
+    .dentista_1{
+        position: relative;
+        right: 55px;
+        left:250px;
+        top:35px;
+     }
+     .dentista_2{
+         position: relative;
+         top: 45px;
+         left:250px;
+         right: 55px;
+     }
+     .dentista_3{
+        position: relative;
+         top: 55px;
+         left:250px;
+         right: 55px;
+     } 
+     .dentista_4{
+        position: relative;
+        top: 65px;
+        left:250px;
+        right: 55px;
+        padding-bottom: 150px;
+     }
+}
+/*responsive tablet*/
+@media only screen and (min-width: 769px) and (max-width:949px){
+    body{
+   
+        background-image: url(../img/img-inicio.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+    
+    }
+    .profesionales h2{
+        padding-bottom: 25px;
+        padding-top:90px;
+        color:var(--primary-color);
+        font-size: 18px;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        text-transform: capitalize;  
+        margin-left:290px;
+        position: absolute;
+    }
+     
+    #odontologos{
+        display: flex;
+        justify-content: center;
+        padding-top: 150px;    
+    }
+ 
+     .dentista_4{
+       padding-bottom: 150px;
+     }
+    .flotante {
+        position: relative;
+        animation: floating 2s -2s infinite;/*animación llamada "floating" que dura 2 segundos, comienza 2 segundos antes de que la animación comience y se repite de manera infinita*/
+        box-shadow: 5px 2px 10px black;/*5 pixeles a la derecha y arriba, 10 pixels de desenfoque y un color negro*/
+        width: 86%;
+    }
+    @keyframes floating {
+        0% {
+          transform: translatex(0);/* el elemento no se desplaza horizontalmente*/
+        }
+        50% {
+          transform: translatex(-10px);/* el elemento se desplaza 10 pixels hacia la izquierda*/
+        }
+        100% {
+          transform: translatex(0); /* elemento vuelve a su posición original*/
+        }
+    }
+
+}
+/*responsive tablet*/
+@media (min-width:920px){
+    body{
+        background-size: cover;
+    }
+    .profesionales h2{
+        padding-bottom: 25px;
+        padding-top:90px;
+        color:var(--primary-color);
+        font-size: 18px;
+        text-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+        font-style: italic;
+        text-transform: capitalize;  
+        margin-left:350px;
+        position: absolute;
+    }
+     
+    #odontologos{
+        display: flex;
+        justify-content: center;
+        padding-top: 150px;    
+    }
+ 
+     .dentista_4{
+       padding-bottom: 150px;
+     }
+    .flotante {
+        position: relative;
+        animation: floating 2s -2s infinite;/*animación llamada "floating" que dura 2 segundos, comienza 2 segundos antes de que la animación comience y se repite de manera infinita*/
+        box-shadow: 5px 2px 10px black;/*5 pixeles a la derecha y arriba, 10 pixels de desenfoque y un color negro*/
+        width: 86%;
+    }
+    @keyframes floating {
+        0% {
+          transform: translatex(0);/* el elemento no se desplaza horizontalmente*/
+        }
+        50% {
+          transform: translatex(-10px);/* el elemento se desplaza 10 pixels hacia la izquierda*/
+        }
+        100% {
+          transform: translatex(0); /* elemento vuelve a su posición original*/
+        }
+    }
+
+}
+/*RESPONSIVE DESKTOP*/
+@media (min-width:1024px){
+/*SECCION PROFESIONALES*/
+
+    .profesionales h2{
+        margin-left:550px;
+        position: absolute;
+    }
+     
+    #odontologos{
+        display: flex;
+        justify-content: center;
+        padding-top: 150px;    
+    }
+ 
+    .dentista_4{
+       padding-bottom: 150px;
+     }
+    
+}
+
